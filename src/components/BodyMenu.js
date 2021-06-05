@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 import BodyShopbyMenu from "./BodyShopbyMenu";
 
@@ -26,8 +26,8 @@ function BodyMenu(params) {
                 <span className="pull-left">$200.00</span>
                 <span className="pull-right">$800.00</span>
                 </span>
-                <input type="text" id="amount" style={{border:0, color:'#666666', 'font-weight':'bold','text-align':'center'}}/>
-                <input type="text" className="price-slider" value="" />
+                <input type="text" id="amount" style={{border:0, color:'#666666', 'fontWeight':'bold','textAlign':'center'}}/>
+                <input type="text" className="price-slider" />
             </div>
             { /* /.price-range-holder */ }
             <a href="#" className="lnk btn btn-primary">Show Now</a>

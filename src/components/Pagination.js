@@ -11,9 +11,9 @@ function Pagination() {
             {
                 [...Array(products.getTotalPage())].map((x, i) =>{
                     if(i==0){
-                        return <li className="active" ><a data-toggle="tab" href= {"#page"+(i+1)} >{i+1}</a></li>
+                        return <li key = {i} className="active" ><a data-toggle="tab" href= {"#page"+(i+1)} >{i+1}</a></li>
                     }else{
-                        return <li ><a data-toggle="tab" href= {"#page"+(i+1)} >{i+1}</a></li>
+                        return <li key = {i} ><a data-toggle="tab" href= {"#page"+(i+1)} >{i+1}</a></li>
                     }
                 })
             }

@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HeaderBox from "./components/HeaderBox";
 import BodyBox from "./components/BodyBox";
@@ -11,7 +10,6 @@ function App() {
     {
         "id" : 1,
         "name": "Home"
-        
       },
       {
         "id" : 2,

@@ -78,7 +78,7 @@ function ProductProvider(props) {
         },
 
         getTotalPage : function(){
-           return this.getPageSize()> this.getList().length ? 1 : (this.getList().length % this.getPageSize())== 0 ? this.getList().length/ this.getPageSize(): this.getList().length/ this.getPageSize()+ 1 
+           return this.getPageSize()> this.getList().length ? 1 : (this.getList().length % this.getPageSize())=== 0 ? this.getList().length/ this.getPageSize(): this.getList().length/ this.getPageSize()+ 1 
         }
      }
     

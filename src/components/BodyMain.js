@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import BodyBanner from "./BodyBanner";
 import BodyContainer from "./BodyContainer";
 function BodyMain(params) {

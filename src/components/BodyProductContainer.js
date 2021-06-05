@@ -3,8 +3,51 @@ import ProductGrid from "./ProductGrid";
 import ProductList from "./ProductList";
 import {ProductContext} from './BodyContainer'
 
+
 function BodyProductContainer() {
     const {products} = useContext(ProductContext);
+
+    function splitArrayIntoChunksOfLen(arr, len) {
+        var chunks = [], i = 0, n = arr.length;
+        while (i < n) {
+          chunks.push(arr.slice(i, len));
+        }
+        return chunks;
+      }
+
+    return (
+        <div id="myTabContent" className="tab-content category-list">
+            <div className="tab-pane active " id="grid-container">
+                <div className="category-product">
+                    <div className="row" >
+                    {products.getPageSize()}
+                    {
+                        
+                        splitArrayIntoChunksOfLen(products.getList(), products.getPageSize()).map((list, index)=>{
+                            
+                            return <><PageContant key={index}  products = {list}  sortIndex = {products.sortIndex}></PageContant><br></br></>
+                        })
+                    }
+                     
+                    </div>
+                </div>
+            </div>
+            <div className="tab-pane "  id="list-container">
+                <div className="category-product">
+                    <div className="category-product-inner wow fadeInUp">
+                    {
+                        products.getList().map((product)=>{
+                            return <ProductList key={product.id}  detail = {product} ></ProductList>
+                        })
+                    }
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+ 
+function PageContant({products, sortIndex}){
     
     const compareObjects = (object1, object2, key) =>{
         const obj1 = object1[key];
@@ -21,7 +64,8 @@ function BodyProductContainer() {
           return 1
         }
         return 0
-      };
+    };
+
     const sortingProducts = (list,sort) => {
         if(!Array.isArray(list)){
             return [];
@@ -42,8 +86,10 @@ function BodyProductContainer() {
         return list;
     }
 
-    
+    return sortingProducts(products, sortIndex ).map((product)=><div key={product.id}   className="col-sm-6 col-md-4 wow fadeInUp"><ProductGrid key={product.id}   detail = {product} ></ProductGrid></div>);
+}
 
+function PageContainer({products, sortIndex}){
     function splitArray( array ) {
         let arrayOfArrays = [];
         while (array.length > 0) {
@@ -51,38 +97,16 @@ function BodyProductContainer() {
             if(arrayElement.length>0)
             arrayOfArrays.push(arrayElement);
         }
-        console.log("arrayOfArrays=",arrayOfArrays)
         return arrayOfArrays;
     }
-    return (
-        <div id="myTabContent" className="tab-content category-list">
-            <div className="tab-pane active " id="grid-container">
-                <div className="category-product">
-                    <div className="row" >
-                    {
-                        splitArray(products.getList()).map((list,index)=>{
-                            sortingProducts(list,products.getSort().index).map((product)=>{
-                                return <div key={product.id}   className="col-sm-6 col-md-4 wow fadeInUp"><ProductGrid key={product.id}   detail = {product} ></ProductGrid></div>
-                            });
-                        })
-                        
-                    }
-                    </div>
-                </div>
-            </div>
-            <div className="tab-pane "  id="list-container">
-                <div className="category-product">
-                    <div className="category-product-inner wow fadeInUp">
-                    {
-                        sortingProducts(products.getSort().index).map((product)=>{
-                            return <ProductList key={product.id}  detail = {product} ></ProductList>
-                        })
-                    }
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+    let ARRAY_LIST=[];
+    splitArray(products).forEach((list, index)=>{
+        console.log("stringify  = ",JSON.stringify(list))
+        ARRAY_LIST.push(<PageContant key={index} products = {list} sortIndex={sortIndex}></PageContant>)
+    });
+    return ARRAY_LIST;
 }
 
+
+export {PageContant, PageContainer};
 export default BodyProductContainer;

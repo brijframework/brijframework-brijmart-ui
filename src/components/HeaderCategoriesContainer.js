@@ -1,6 +1,4 @@
-import React, {useState} from 'react';
-import axios from 'axios';
-import { getJSON } from 'jquery';
+import React from 'react';
 
 function HeaderCategoriesContainer(params) {
      const categories=params.categories;
@@ -10,13 +8,13 @@ function HeaderCategoriesContainer(params) {
         return <li key={category.id} className="active dropdown yamm-fw">
                 <a href="home.html" data-hover="dropdown" className="dropdown-toggle" data-toggle="dropdown">{category.name}</a>
                 {  category.subcategories && category.subcategories.length !=0 ?
-                    <ul className="dropdown-menu">
+                    <ul className="dropdown-menu" >
                         <li>
                             <div className="yamm-content ">
-                                <div className="row">
+                                <div className="row" >
                                 {
                                     category.subcategories.map(subcategory => {
-                                        return  <div className="col-xs-12 col-sm-6 col-md-2 col-menu">
+                                        return  <div className="col-xs-12 col-sm-6 col-md-2 col-menu" key = {subcategory.id}>
                                                     <h2 className="title">{subcategory.type}</h2>
                                                     <ul className="links">
                                                        {

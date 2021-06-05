@@ -6,7 +6,7 @@ function SearchBox( {categories, name}) {
 
     const categoriesList=() =>{
         return  categories.map(category => {
-           return  <li role="presentation" key={category.id}><a role="menuitem" tabindex="-1" href="home.html" >{category.name}</a></li>
+           return  <li role="presentation" key={category.id}><a role="menuitem" tabIndex="-1" href="home.html" >{category.name}</a></li>
         });
      }
  
