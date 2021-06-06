@@ -10,27 +10,32 @@ function BodyProductContainer() {
     function splitArrayIntoChunksOfLen(arr, len) {
         var chunks = [], i = 0, n = arr.length;
         while (i < n) {
-          chunks.push(arr.slice(i, len));
+          chunks.push(arr.slice(i, len>=n ? n : i += len));
         }
         return chunks;
       }
 
+      console.log("SplitArrayIntoChunksOfLen = ",splitArrayIntoChunksOfLen(products.getList(), products.getPageSize()))
+
     return (
         <div id="myTabContent" className="tab-content category-list">
             <div className="tab-pane active " id="grid-container">
-                <div className="category-product">
-                    <div className="row" >
-                    {products.getPageSize()}
-                    {
-                        
-                        splitArrayIntoChunksOfLen(products.getList(), products.getPageSize()).map((list, index)=>{
-                            
-                            return <><PageContant key={index}  products = {list}  sortIndex = {products.sortIndex}></PageContant><br></br></>
-                        })
-                    }
-                     
-                    </div>
-                </div>
+
+            <div id="myTabContentCategory-list" className="tab-content category-list">
+            {
+                splitArrayIntoChunksOfLen(products.getList(), products.getPageSize()).map((list, index)=>{
+                    return (
+                        <div className={products.activeClassIndex()===index ? "category-product tab-pane active" : "category-product tab-pane"}  id={"grid-container-"+index}>
+                            <div className="row" >
+                            {
+                                <PageContant key={index}  products = {list}  sortIndex = {products.sortIndex}></PageContant>
+                            }
+                            </div>
+                        </div>
+                    )
+                })
+            }
+            </div>
             </div>
             <div className="tab-pane "  id="list-container">
                 <div className="category-product">
@@ -86,7 +91,7 @@ function PageContant({products, sortIndex}){
         return list;
     }
 
-    return sortingProducts(products, sortIndex ).map((product)=><div key={product.id}   className="col-sm-6 col-md-4 wow fadeInUp"><ProductGrid key={product.id}   detail = {product} ></ProductGrid></div>);
+    return sortingProducts(products, sortIndex ).map((product)=><div key={product.id}   className="col-sm-6 col-md-4"><ProductGrid key={product.id}   detail = {product} ></ProductGrid></div>);
 }
 
 function PageContainer({products, sortIndex}){

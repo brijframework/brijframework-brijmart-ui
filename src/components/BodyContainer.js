@@ -35,6 +35,58 @@ function ProductProvider(props) {
                 "className" : "tag new",
                 "name" : "New"
             }
+        },
+        {
+            "id": 3,
+            "image" : "assets/images/products/p3.jpg",
+            "url" : "detail.html",
+            "name" :"Broccoli",
+            "description" : "Broccoli is an edible green plant in the cabbage family whose large flowering head, stalk and small associated leaves are eaten as a vegetable. Broccoli is classified in the Italica cultivar group of the species",
+            "price" : 14.5,
+            "discount": 20,
+            "tag" : {
+                "className" : "tag sale",
+                "name" : "sale"
+            }
+        },
+        {
+            "id": 4,
+            "image" : "assets/images/products/p4.jpg",
+            "url" : "detail.html",
+            "name" :"Pea",
+            "description":"The pea is most commonly the small spherical seed or the seed-pod of the pod fruit Pisum sativum. Each pod contains several peas, which can be green or yellow. Botanically, pea pods are fruit, since they contain seeds and develop from the ovary of a flower.",
+            "price" : 16.5,
+            "discount": 20,
+            "tag" : {
+                "className" : "tag new",
+                "name" : "New"
+            }
+        },
+        {
+            "id": 5,
+            "image" : "assets/images/products/p5.jpg",
+            "url" : "detail.html",
+            "name" :"Broccoli",
+            "description" : "Broccoli is an edible green plant in the cabbage family whose large flowering head, stalk and small associated leaves are eaten as a vegetable. Broccoli is classified in the Italica cultivar group of the species",
+            "price" : 14.5,
+            "discount": 20,
+            "tag" : {
+                "className" : "tag sale",
+                "name" : "sale"
+            }
+        },
+        {
+            "id": 6,
+            "image" : "assets/images/products/p6.jpg",
+            "url" : "detail.html",
+            "name" :"Pea",
+            "description":"The pea is most commonly the small spherical seed or the seed-pod of the pod fruit Pisum sativum. Each pod contains several peas, which can be green or yellow. Botanically, pea pods are fruit, since they contain seeds and develop from the ovary of a flower.",
+            "price" : 16.5,
+            "discount": 20,
+            "tag" : {
+                "className" : "tag new",
+                "name" : "New"
+            }
         }
     ]
   
@@ -42,10 +94,27 @@ function ProductProvider(props) {
     const [pageSize, updatePageSize] = useState(1);
     const [pageIndex, updatePageIndex] = useState(1);
 
+    const [activeIndex, updateActiveIndex] = useState(0);
+
     let products = { 
         sort : sort,
         pageSize : pageSize,
         pageIndex : pageIndex,
+        activeIndex : activeIndex,
+        activeClasses : [],
+        addActiveClass : function(i){
+            if(this.activeClasses.length>i && i>=0){
+                updateActiveIndex(i);
+                for(var index=0 ; index<this.activeClasses.length; index++) {
+                    this.activeClasses[index] = false;
+                }
+                this.activeClasses[i] = true;
+            }
+        },
+        activeClassIndex : function(){
+            return activeIndex;
+        },
+        
         getList : function(){
             return initProducts;
         },
@@ -78,9 +147,15 @@ function ProductProvider(props) {
         },
 
         getTotalPage : function(){
-           return this.getPageSize()> this.getList().length ? 1 : (this.getList().length % this.getPageSize())=== 0 ? this.getList().length/ this.getPageSize(): this.getList().length/ this.getPageSize()+ 1 
+           return Math.floor(this.getPageSize()> this.getList().length ? 1 : (this.getList().length % this.getPageSize())=== 0 ? this.getList().length/ this.getPageSize(): this.getList().length/ this.getPageSize()+ 1 )
         }
      }
+
+     for(var i=0 ; i<products.getTotalPage(); i++) {
+        products.activeClasses[i] = false;
+    }
+
+    products.activeClasses[0] = true;
     
     return (
         <ProductContext.Provider value={ {products}}>
