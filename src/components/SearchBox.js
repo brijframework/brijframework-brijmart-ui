@@ -12,25 +12,25 @@ function SearchBox( {categories, name}) {
  
     return (
         <div className="search-area">
-        <form>
-            <div className="control-group">
-                <ul className="categories-filter animate-dropdown">
-                    <li className="dropdown">
-                        <a className="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories 
-                            <b className="caret"></b>
-                        </a>
-                        <ul className="dropdown-menu" role="menu" >
-                        {
-                            categoriesList()
-                        }
-                        </ul>
-                    </li>
-                </ul>
-                <input className="search-field" placeholder="Search here..." onKeyUp={name} />
-                <a className="search-button" href="#" ></a>    
-            </div>
-        </form>
-    </div>
+            <form>
+                <div className="control-group">
+                    <ul className="categories-filter animate-dropdown">
+                        <li className="dropdown">
+                            <a className="dropdown-toggle"  data-toggle="dropdown" href="#">Categories 
+                                <b className="caret"></b>
+                            </a>
+                            <ul className="dropdown-menu" role="menu" >
+                            {
+                                categoriesList()
+                            }
+                            </ul>
+                        </li>
+                    </ul>
+                    <input className="search-field" placeholder="Search here..." onKeyUp={name} />
+                    <a className="search-button" href="#" ></a>    
+                </div>
+            </form>
+        </div>
     
     )
 }

@@ -93,7 +93,7 @@ function ProductProvider(props) {
     const [sort, updateSort] = useState({index: 1, orderBy : 'position'});
     const [pageSize, updatePageSize] = useState(1);
     const [pageIndex, updatePageIndex] = useState(1);
-
+    const [filterTab, updateFilterTab] = useState('grid-container');
     const [activeIndex, updateActiveIndex] = useState(0);
 
     let products = { 
@@ -102,6 +102,10 @@ function ProductProvider(props) {
         pageIndex : pageIndex,
         activeIndex : activeIndex,
         activeClasses : [],
+        filterTab : filterTab,
+        updateFilterTabs : function(i){
+            updateFilterTab(i);
+        },
         addActiveClass : function(i){
             if(this.activeClasses.length>i && i>=0){
                 updateActiveIndex(i);
@@ -174,7 +178,7 @@ function BodyContainer() {
                     <div className="col col-sm-2 col-md-2">
                         <FilterTabs></FilterTabs>
                     </div>
-                    <div className="col col-sm-4 col-md-8">
+                    <div className="col col-sm-4 col-md-6">
                         <div className="col col-sm-6 col-md-6 no-padding">
                             <SortPosition></SortPosition>
                         </div>
@@ -182,7 +186,7 @@ function BodyContainer() {
                             <ShowOn></ShowOn>
                         </div>
                     </div>
-                    <div className="col col-sm-4 col-md-2 text-right">
+                    <div className="col col-sm-4 col-md-4 text-right">
                         <Pagination></Pagination>		
                     </div>
                 </div>

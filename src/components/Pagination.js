@@ -11,9 +11,9 @@ function Pagination() {
             {
                 products.activeClasses.map((x, i) =>{
                     if(i==0){
-                        return <li key = {i} className={products.activeClassIndex()===i ? "active btn-default" : ""} ><a data-toggle="tab" href= {"#grid-container-"+(i)} onClick={() => products.addActiveClass(i)}>{i+1}</a></li>
+                        return <li key = {i} className={products.activeClassIndex()===i ? "active btn-default" : ""} ><a data-toggle="tab" href= {"#"+products.filterTab+"-"+(i)} onClick={() => products.addActiveClass(i)}>{i+1}</a></li>
                     }else{
-                        return <li key = {i} className={products.activeClassIndex()===i ? "active btn-default" : ""} ><a data-toggle="tab" href= {"#grid-container-"+(i)} onClick={() => products.addActiveClass(i)} >{i+1}</a></li>
+                        return <li key = {i} className={products.activeClassIndex()===i ? "active btn-default" : ""} ><a data-toggle="tab" href= {"#"+products.filterTab+"-"+(i)} onClick={() => products.addActiveClass(i)} >{i+1}</a></li>
                     }
                 })
             }
