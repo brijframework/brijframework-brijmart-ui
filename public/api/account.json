@@ -1,0 +1,70 @@
+{
+    "dropdwons" :[
+        {
+            "id": 1,
+            "type": "currency",
+            "name":"Currency",
+             "options" : [
+                {
+                    "id":1,
+                    "name":"USD"
+                },
+                {
+                    "id":2,
+                    "name":"INR"
+                },
+                {
+                    "id":3,
+                    "name":"GBP"
+                }
+             ]
+        },
+        {
+            "id": 2,
+            "type": "language",
+            "name":"Language",
+            "options" : [
+                {
+                    "id":1,
+                    "name":"en",
+                    "desc":"Englist"
+                },
+                {
+                    "id":2,
+                    "name":"hi",
+                    "desc":"Hindi"
+                }
+            ]
+        }
+    ],
+    "creditional" : {
+        "token": ""
+    },
+    "links" : [
+        {
+            "name":"My account",
+            "type" : "account",
+            "url": "myaccount"
+        },
+        {
+            "name":"Wish List",
+            "type" : "wishlist",
+            "url": "wishlist"
+        },
+        {
+            "name":"My Cart",
+            "type" : "myCart",
+            "url": "shopping-cart"
+        },
+        {
+            "name":"Check out",
+            "type" : "checkout",
+            "url": "checkout"
+        },
+        {
+            "name":"Log in",
+            "type" : "login",
+            "url": "login"
+        }
+    ]
+}

@@ -344,6 +344,9 @@ img[src="assets/images/blank.gif"] {
   .inner-bottom-xs {
     padding-bottom: 40px;
   }
+  .main-header .top-search-holder .search-area .search-field {
+    width: 74.6%;
+}
 }
 .section-title {
   font-size: 14px;
@@ -673,12 +676,8 @@ a {
 .main-header .top-search-holder .search-area .categories-filter .dropdown-menu li a:focus {
   color: #12cca7;
 }
-.header-style-1 {
-  background: #0b816a;
-}
-
 .header-style-1 .header-nav {
-  background: #34299b;
+  background: #12cca7;
 }
 .cnt-home .header-style-1 .header-nav .navbar .navbar-nav > li.active {
   background: #0b816a;
@@ -722,7 +721,6 @@ a {
 }
 .product .product-info .product-price .price {
   color: #12cca7;
-  text-align: justify;
 }
 .product .cart .action ul li.lnk a:hover,
 .product .cart .action ul li.lnk a:focus {
@@ -1206,6 +1204,7 @@ header{background:#333333}
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+  margin: 8px 0 0;
   background:#fff;
   border-radius:2px;
 }
@@ -1215,7 +1214,7 @@ header{background:#333333}
   -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
   padding: 13px;
-  width: 77%;
+  width: 74.7%;
 }
 .main-header .top-search-holder .search-area .categories-filter {
   border-right: 1px solid #E0E0E0;
@@ -1223,8 +1222,7 @@ header{background:#333333}
   display: inline-block;
   line-height: 44px;
   background: #f6f6f6;
-  border-radius:3px 0px 0px 3px;
-  width: 15%;
+  border-radius:3px 0px 0px 3px
 }
 .main-header .top-search-holder .search-area .categories-filter a {
   padding: 0 10px;
@@ -1240,7 +1238,7 @@ header{background:#333333}
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid #e1e1e1;
-  
+  padding: 12px 17px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -1266,8 +1264,8 @@ header{background:#333333}
   margin: 0px;
   padding: 12px 19px 12px;
   text-align: center;
-  background-color: #59b210;
-  border: 1px solid #59b210;
+    background-color: #59b210;
+    border: 1px solid #59b210;
 }
 .main-header .top-search-holder .search-area .search-button:after {
   color: #fff;
@@ -1281,6 +1279,7 @@ header{background:#333333}
   background: #404040;
 }
 .top-cart-row {
+  padding-top:8px;
   padding-left:0px
 }
 .top-cart-row .dropdown-cart {
@@ -1531,7 +1530,7 @@ header{background:#333333}
 
 }
 
-.yamm .dropdown-menu .yamm-content .col-menu {min-width:140px}
+.yamm .dropdown-menu .yamm-content .col-menu {min-width:150px}
 
 .yamm .dropdown-menu .yamm-content .links li a {
   padding: 4px 0px;
@@ -2699,7 +2698,8 @@ age-container #owl-main .owl-next {
 .product .product-info .product-price .price {
   font-weight: 700;
   font-size: 14px;
-  line-height: 4px;
+  line-height: 30px;
+  margin-right: 8px;
 }
 .product .product-info .product-price .price-before-discount {
   text-decoration: line-through;
@@ -3738,11 +3738,9 @@ age-container #owl-main .owl-next {
 }
 .product-list.product .product-info .name {
   font-size: 18px;
-  text-align: justify;
 }
 .product-list.product .product-info .description {
   line-height: 20px;
-  text-align: justify;
 }
 
 /*===================================================================================*/
@@ -4367,7 +4365,6 @@ age-container #owl-main .owl-next {
 .homepage-container .product .product-info .name {
   font-size: 18px !important;
   font-family: 'Open Sans', sans-serif;
-  text-align: justify;
 }
 .homepage-container .product .product-info .name a {
   color: #555;
@@ -4515,11 +4512,11 @@ age-container #owl-main .owl-next {
 #owl-main .item {height:150px}
 #owl-main .item .caption .button-holder {margin:0px}
 #hero .btn-primary {padding:5px 10px; font-size:12px; line-height:normal; margin-top:8px}
+.main-header .top-search-holder .search-area .search-field {
+  width: 74.7%;
+}
+}
 
-}
-.container {
-  width: 1350px;
-}
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
 	.navbar-toggle {float:left; border:none}
@@ -4569,7 +4566,6 @@ age-container #owl-main .owl-next {
   }
   .main-header .top-search-holder .search-area .search-button {
     padding: 12px 19px;
-    width: 10%;
   }
   .sidebar .side-menu nav .nav > li > .mega-menu {
     left: 0px;
@@ -4655,12 +4651,50 @@ age-container #owl-main .owl-next {
 
 .copyright-bar .payment-methods {text-align:left; margin-top:10px}
 .single-product  .home-banner {display:none}
+.main-header .top-search-holder .search-area .search-field {
+  width: 89%;
 }
+}
+@media (min-width: 276px) and (max-width: 657px) {
+  .main-header .top-search-holder .search-area .search-field {
+    width: 80%;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 280px) and (max-width: 653px) {
+  .main-header .top-search-holder .search-area .search-field {
+    width: 78%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+  .main-header .top-search-holder .search-area .search-field {
+    width: 81%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 640px) {
+  .main-header .top-search-holder .search-area .search-field {
+    width: 83%;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 731px) {
+  .main-header .top-search-holder .search-area .search-field {
+    width: 85%;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+  .main-header .top-search-holder .search-area .search-field {
+    width: 89%;
+  }
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .top-bar .cnt-account ul > li {
 
-  }
   .sidebar .side-menu nav .nav > li > .mega-menu {
     min-width: 100%;
     left: 0px;
@@ -4685,6 +4719,9 @@ age-container #owl-main .owl-next {
   }
   .cnt-homepage .container {
     width: 100%;
+  }
+  #top-banner-and-menu .body-content {
+    min-height: 400px;
   }
   .body-content .sidebar {
     margin-bottom: 30px;
@@ -4728,6 +4765,9 @@ age-container #owl-main .owl-next {
   }
   .special-menu {display:none!important}
   .single-product  .home-banner {display:none}
+  .main-header .top-search-holder .search-area .search-field {
+    width: 77%;
+  }
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -5317,7 +5357,7 @@ age-container #owl-main .owl-next {
   font-family: 'Open Sans', sans-serif, sans-serif;
   font-size: 12px;
   text-transform: lowercase;
-  margin-left: 4px;
+  margin-left: 14px;
 }
 .shopping-cart .shopping-cart-table table tbody tr .cart-product-edit a {
   color: #666666;

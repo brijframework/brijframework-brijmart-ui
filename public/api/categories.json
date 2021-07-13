@@ -1,13 +1,93 @@
 [
-{
-  "id" : 1,
-  "name": "Home"
-},
-{
-  "id" : 2,
-  "name": "Clothing"
-},
-{
-  "id" : 3,
-  "name": "Data"
-}]
+  {
+    "id": 1,
+    "name": "Home",
+    "link": "home"
+  },
+  {
+    "id": 2,
+    "name": "Clothing",
+    "link": "clothing",
+    "categories": [
+      {
+        "id": 1,
+        "name": "Man",
+        "link": "man",
+        "categories": [
+          {
+            "id": 1,
+            "name": "Dresses",
+            "link": "clothing/man/dresses"
+          },
+          {
+            "id": 2,
+            "name": "Shoes",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 3,
+            "name": "Jackets",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 4,
+            "name": "Sunglasses",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 5,
+            "name": "Sport Wear",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 6,
+            "name": "Blazers",
+            "link": "clothing/dresses"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Female",
+        "link": "female",
+        "categories": [
+          {
+            "id": 7,
+            "name": "Shirts",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 8,
+            "name": "Shorts",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 9,
+            "name": "Handbags",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 10,
+            "name": "Jwellery",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 11,
+            "name": "Swimwear",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 12,
+            "name": "Tops",
+            "link": "clothing/dresses"
+          },
+          {
+            "id": 13,
+            "name": "Flats",
+            "link": "clothing/dresses"
+          }
+        ]
+      }
+    ]
+  }
+]
