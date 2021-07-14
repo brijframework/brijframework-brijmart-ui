@@ -1,34 +1,34 @@
 [
     {
-        "image":"assets/images/products/p19.jpg",
-        "tag":{
-            "className" : "tag new",
-            "name":"new"
-        },
-        "name":"Floral Print Buttoned",
-        "link":"product/detail",
-        "rating" : {
-            "className" : "rating rateit-small",
-            "value":"4.5"
-        },
-        "description":"",
-        "price":14.5,
-        "discount": 18.5
+      "image": "assets/images/products/p19.jpg",
+      "tag": {
+        "className": "tag new",
+        "name": "new"
+      },
+      "name": "Floral Print Buttoned",
+      "link": "product/detail",
+      "rating": {
+        "className": "rating rateit-small",
+        "value": "4.5"
+      },
+      "description": "",
+      "price": 14.5,
+      "discount": 18.5
     },
     {
-        "image":"assets/images/products/p28.jpg",
-        "tag":{
-            "className" : "tag new",
-            "name":"new"
-        },
-        "name":"Floral Buttoned",
-        "link":"product/detail",
-        "rating" : {
-            "className" : "rating rateit-small",
-            "value":"5"
-        },
-        "description":"",
-        "price":14.5,
-        "discount": 18.5
+      "image": "assets/images/products/p28.jpg",
+      "tag": {
+        "className": "tag new",
+        "name": "new"
+      },
+      "name": "Floral Buttoned",
+      "link": "product/detail",
+      "rating": {
+        "className": "rating rateit-small",
+        "value": "5"
+      },
+      "description": "",
+      "price": 14.5,
+      "discount": 18.5
     }
-]
+  ]

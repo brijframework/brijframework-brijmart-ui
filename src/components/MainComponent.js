@@ -32,7 +32,7 @@ const MainComponent =({search})=>{
               <ShoppingCart></ShoppingCart>
             </Route>  
             <Route exact path="/login"  >
-            <LoginModel></LoginModel> 
+              <LoginModel></LoginModel> 
             </Route>          
           </Switch>
     </div>

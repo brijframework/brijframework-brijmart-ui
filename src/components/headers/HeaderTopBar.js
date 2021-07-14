@@ -13,13 +13,13 @@ const HeaderTopBar = ({account})=>{
 
     const dropdownList = (dropdowns) =>{
         return dropdowns.map(dropdown =>{
-            return  <li className="dropdown dropdown-small">
+            return  <li key={dropdown.id} className="dropdown dropdown-small">
                         <a href="#" className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
                         <span className="value"> {dropdown.name} </span><b className="caret"></b></a>
                         <ul className="dropdown-menu">
                         {
                             dropdown.options.map(option=>{
-                                return <li><a href="#"><i className={linkIcons[option.type]}></i>{option.name}</a></li>
+                                return <li key={option.id}><a href="#"><i className={linkIcons[option.type]}></i>{option.name}</a></li>
                             })
                         }
                         </ul>
@@ -29,7 +29,7 @@ const HeaderTopBar = ({account})=>{
 
     const linkList = (links) =>{
         return links.map(link =>{
-            return <li><Link to={link.url}><i className={linkIcons[link.type]}></i>{link.name}</Link></li>
+            return <li key={link.id}><Link to={link.url}><i className={linkIcons[link.type]}></i>{link.name}</Link></li>
         })
     }
 

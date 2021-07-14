@@ -13,8 +13,7 @@ import FooterComponent from './components/FooterComponent'
 
 function App() {
   
-  const history = createBrowserHistory()
-  console.log(history.location.pathname);
+  const history = createBrowserHistory();
   const [account, updateAccount] = useState({
     "dropdwons" :[
         {
@@ -91,8 +90,8 @@ function App() {
   const updateSearchEvent=(value)=>{
     updateSearch(value);
     if(history.location.pathname !="/"){
-      history.push("/");
-      document.getElementById("header_home").click();
+        document.getElementById("header_home").click();
+        history.push("/");
     }
     //
   }

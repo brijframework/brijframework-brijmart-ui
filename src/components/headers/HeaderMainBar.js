@@ -8,13 +8,13 @@ const HeaderMainBar = ({updateSearch, categories}) =>{
                     {
                      categories.map((category)=>{
                         if(category.categories == undefined ||category.categories === null){
-                            return <li className="menu-header">{category.name}</li>
+                            return <li key={category.id} className="menu-header">{category.name}</li>
                         }else{
                             return (<>
                                 <li className="menu-header">{category.name}</li>
                                 {
                                     category.categories.map((category)=> {
-                                     return <li role="presentation"><a role="menuitem" tabIndex="-1" href={category.link}>- {category.name}</a></li>
+                                     return <li key={category.id} role="presentation"><a role="menuitem" tabIndex="-1" href={category.link}>- {category.name}</a></li>
                                     })
                                 }
                                 </>

@@ -8,7 +8,7 @@ return (
                <table className="table">
                   <thead>
                      <tr>
-                        <th colspan="4" className="heading-title">My Wishlist</th>
+                        <th colSpan="4" className="heading-title">My Wishlist</th>
                      </tr>
                   </thead>
                   <tbody>

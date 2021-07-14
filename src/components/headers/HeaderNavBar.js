@@ -11,7 +11,7 @@ const HeaderNavBar = ({categories}) =>{
                     <ul className="links">
                      {
                         category.categories.map((category)=> {
-                           return <li><a href={category.link}>{category.name}</a></li>
+                           return <li key={category.id}><Link to={category.link}>{category.name}</Link></li>
                        })
                      }
                     </ul>
@@ -22,23 +22,24 @@ const HeaderNavBar = ({categories}) =>{
 
     const navbarCategories = (categories) =>{
         return <>
-        <li className="dropdown yamm-fw">
+        <li key="1" className="dropdown yamm-fw">
             <Link id="header_home" to="/" data-hover="dropdown" className="dropdown-toggle" data-toggle="dropdown">Home</Link>
         </li>
         {
             categories.map((category)=>{
                 if(category.categories == undefined ||category.categories === null){
-                    return <li className="dropdown yamm-fw">
-                                <a href={category.link} data-hover="dropdown" className="dropdown-toggle" data-toggle="dropdown">{category.name}</a>
+                    return <li key={category.id} className="dropdown yamm-fw">
+                                <Link to={category.link} data-hover="dropdown" className="dropdown-toggle" 
+                                data-toggle="dropdown">{category.name}</Link>
                         </li>
                 } else{
                     return (
-                        <li className="dropdown mega-menu">
-                            <a href={category.link} data-hover="dropdown" className="dropdown-toggle" data-toggle="dropdown">
+                        <li key={category.id} className="dropdown mega-menu">
+                            <Link to={category.link} data-hover="dropdown" className="dropdown-toggle" data-toggle="dropdown">
                                 {category.name} <span className="menu-label hot-menu hidden-xs">hot</span>
-                            </a>
+                            </Link>
                             <ul className="dropdown-menu container">
-                                <li>
+                                <li key={category.id}>
                                     <div className="yamm-content ">
                                         <div className="row">
                                             {

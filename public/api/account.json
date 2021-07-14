@@ -1,36 +1,36 @@
 {
     "dropdwons" :[
         {
-            "id": 1,
+            "id": "currencyoptions",
             "type": "currency",
             "name":"Currency",
              "options" : [
                 {
-                    "id":1,
+                    "id":"currency_usd",
                     "name":"USD"
                 },
                 {
-                    "id":2,
+                    "id":"currency_inr",
                     "name":"INR"
                 },
                 {
-                    "id":3,
+                    "id":"currency_gbp",
                     "name":"GBP"
                 }
              ]
         },
         {
-            "id": 2,
+            "id": "languageoptions",
             "type": "language",
             "name":"Language",
             "options" : [
                 {
-                    "id":1,
+                    "id":"language_en",
                     "name":"en",
                     "desc":"Englist"
                 },
                 {
-                    "id":2,
+                    "id":"language_hi",
                     "name":"hi",
                     "desc":"Hindi"
                 }
@@ -42,26 +42,31 @@
     },
     "links" : [
         {
+            "id": "myaccountlink",
             "name":"My account",
             "type" : "account",
             "url": "myaccount"
         },
         {
+            "id": "wishlistlink",
             "name":"Wish List",
             "type" : "wishlist",
             "url": "wishlist"
         },
         {
+            "id": "shoppinglink",
             "name":"My Cart",
             "type" : "myCart",
             "url": "shopping-cart"
         },
         {
+            "id": "checkoutlink",
             "name":"Check out",
             "type" : "checkout",
             "url": "checkout"
         },
         {
+            "id": "loginlink",
             "name":"Log in",
             "type" : "login",
             "url": "login"
