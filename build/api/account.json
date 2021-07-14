@@ -1,75 +1,75 @@
 {
-    "dropdwons" :[
-        {
-            "id": "currencyoptions",
-            "type": "currency",
-            "name":"Currency",
-             "options" : [
-                {
-                    "id":"currency_usd",
-                    "name":"USD"
-                },
-                {
-                    "id":"currency_inr",
-                    "name":"INR"
-                },
-                {
-                    "id":"currency_gbp",
-                    "name":"GBP"
-                }
-             ]
-        },
-        {
-            "id": "languageoptions",
-            "type": "language",
-            "name":"Language",
-            "options" : [
-                {
-                    "id":"language_en",
-                    "name":"en",
-                    "desc":"Englist"
-                },
-                {
-                    "id":"language_hi",
-                    "name":"hi",
-                    "desc":"Hindi"
-                }
-            ]
-        }
+    "dropdwons": [
+      {
+        "id": "currencyoptions",
+        "type": "currency",
+        "name": "Currency",
+        "options": [
+          {
+            "id": "currency_usd",
+            "name": "USD"
+          },
+          {
+            "id": "currency_inr",
+            "name": "INR"
+          },
+          {
+            "id": "currency_gbp",
+            "name": "GBP"
+          }
+        ]
+      },
+      {
+        "id": "languageoptions",
+        "type": "language",
+        "name": "Language",
+        "options": [
+          {
+            "id": "language_en",
+            "name": "en",
+            "desc": "Englist"
+          },
+          {
+            "id": "language_hi",
+            "name": "hi",
+            "desc": "Hindi"
+          }
+        ]
+      }
     ],
-    "creditional" : {
-        "token": ""
+    "creditional": {
+      "token": ""
     },
-    "links" : [
-        {
-            "id": "myaccountlink",
-            "name":"My account",
-            "type" : "account",
-            "url": "myaccount"
-        },
-        {
-            "id": "wishlistlink",
-            "name":"Wish List",
-            "type" : "wishlist",
-            "url": "wishlist"
-        },
-        {
-            "id": "shoppinglink",
-            "name":"My Cart",
-            "type" : "myCart",
-            "url": "shopping-cart"
-        },
-        {
-            "id": "checkoutlink",
-            "name":"Check out",
-            "type" : "checkout",
-            "url": "checkout"
-        },
-        {
-            "id": "loginlink",
-            "name":"Log in",
-            "type" : "login",
-            "url": "login"
-        }
+    "links": [
+      {
+        "id": "myaccountlink",
+        "name": "My account",
+        "type": "account",
+        "url": "myaccount"
+      },
+      {
+        "id": "wishlistlink",
+        "name": "Wish List",
+        "type": "wishlist",
+        "url": "wishlist"
+      },
+      {
+        "id": "shoppinglink",
+        "name": "My Cart",
+        "type": "myCart",
+        "url": "shopping-cart"
+      },
+      {
+        "id": "checkoutlink",
+        "name": "Check out",
+        "type": "checkout",
+        "url": "checkout"
+      },
+      {
+        "id": "loginlink",
+        "name": "Log in",
+        "type": "login",
+        "url": "login"
+      }
     ]
-}
+  }

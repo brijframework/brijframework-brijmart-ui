@@ -52,7 +52,7 @@ const HeaderMainBar = ({updateSearch, categories}) =>{
                                     {
                                         categoriesDropdown(categories)
                                     }
-                                    <input className="search-field" placeholder="Search here..." onKeyUp={(event)=>updateSearch(event.target.value)}/>
+                                    <input id="search-field" className="search-field" placeholder="Search here..." onKeyUp={(event)=>updateSearch(event.target.value)}/>
                                     <a className="search-button" href="#" ></a>    
                                 </div>
                             </form>

@@ -90,8 +90,11 @@ function App() {
   const updateSearchEvent=(value)=>{
     updateSearch(value);
     if(history.location.pathname !="/"){
-        document.getElementById("header_home").click();
         history.push("/");
+        document.getElementById("header_home").click();
+       
+        document.getElementById("search-field").focus();
+        
     }
     //
   }
